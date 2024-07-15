@@ -2,7 +2,7 @@
   <div>
     <input v-model="cep" placeholder="Enter CEP" />
     <button @click="handleFetchCep">Buscar Endereço</button>
-    <div v-if="address.logradouro">
+    <div v-if="address.logradouro" class="address-container">
       <p>{{ address.logradouro }}</p>
       <p>{{ address.bairro }}</p>
       <p>{{ address.localidade }} - {{ address.uf }}</p>
@@ -31,7 +31,7 @@ export default {
 };
 </script>
 <style >
-.search-container {
+div {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,7 +43,7 @@ export default {
   box-sizing: border-box;
 }
 
-.cep-input {
+input {
   width: 300px;
   padding: 10px;
   font-size: 1em;
@@ -52,7 +52,7 @@ export default {
   border-radius: 5px;
 }
 
-.search-button {
+button {
   padding: 10px 20px;
   font-size: 1.2em;
   color: white;
@@ -64,7 +64,7 @@ export default {
   margin-bottom: 20px;
 }
 
-.search-button:hover {
+button:hover {
   background-color: #0056b3;
 }
 
@@ -74,6 +74,7 @@ export default {
   border: 1px solid #ccc;
   border-radius: 5px;
   width: 300px;
+  height: 200px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -83,3 +84,4 @@ export default {
   color: #333;
 }
 </style>
+

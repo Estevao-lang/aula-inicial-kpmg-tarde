@@ -1,9 +1,9 @@
 <!-- Exemplo em App.vue -->
 <template>
   <div id="app">
-    <router-link to="/">Home</router-link>
+    <router-link to="/" class="inicio">Inicío</router-link>
 
-    <router-view></router-view>
+    <router-view to="search"></router-view>
   </div>
 </template>
 
@@ -12,3 +12,15 @@ export default {
   name: 'App'
 };
 </script>
+
+<style>
+#app{
+ background-color: #f0f0f0 ; 
+}
+.inicio{
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+}
+
+</style>
