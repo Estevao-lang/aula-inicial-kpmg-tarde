@@ -67,7 +67,11 @@ button {
 button:hover {
   background-color: #0056b3;
 }
-
+template{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .address-container {
   background-color: #fff;
   padding: 20px;
